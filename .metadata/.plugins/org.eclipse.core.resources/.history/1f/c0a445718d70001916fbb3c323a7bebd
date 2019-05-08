@@ -1,0 +1,31 @@
+package com.capgemini.movieratingservice.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.movieratingservice.entity.Rating;
+
+@RestController
+@RequestMapping("/ratings")
+public class MovieRatingController {
+
+	private List<Rating> ratings;
+	
+	public MovieRatingController() {
+		ratings = new ArrayList<Rating>();
+		ratings.add(new Rating(101,5));
+		ratings.add(new Rating(102,4));
+
+	}
+	public ResponseEntity<List<Rating>>getUserRating(@PathVariable String userId){
+		
+		return null;
+	
+}
+	
+}
